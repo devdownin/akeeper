@@ -1,6 +1,6 @@
 # Audit UI/UX & Guide d'Amélioration de l'Expérience Utilisateur
 
-Ce document fournit une grille d'évaluation complète, une méthodologie d'audit et un ensemble de recommandations pour analyser et améliorer l'interface utilisateur (UI) et l'expérience utilisateur (UX) de tout produit web ou mobile.
+Ce document fournit une grille d'évaluation complète, une méthodologie d'audit, ainsi qu'une liste de **suggestions concrètes et "Quick Wins"** pour analyser et améliorer l'interface utilisateur (UI) et l'expérience utilisateur (UX) de tout produit web ou mobile.
 
 ---
 
@@ -14,7 +14,8 @@ Ce document fournit une grille d'évaluation complète, une méthodologie d'audi
 6. [Formulaires & Interactions](#6-formulaires--interactions)
 7. [Accessibilité & Inclusion (WCAG / RGAA)](#7-accessibilité--inclusion-wcag--rgaa)
 8. [Performance Visuelle & États de Chargement](#8-performance-visuelle--états-de-chargement)
-9. [Matrice de Priorisation & Plan d'Action](#9-matrice-de-priorisation--plan-daction)
+9. [Suggestions Concrètes & Quick Wins UI/UX](#9-suggestions-concrètes--quick-wins-uiux)
+10. [Matrice de Priorisation & Plan d'Action](#10-matrice-de-priorisation--plan-daction)
 
 ---
 
@@ -129,7 +130,33 @@ Un audit UI/UX structuré repose sur :
 
 ---
 
-## 9. Matrice de Priorisation & Plan d'Action
+## 9. Suggestions Concrètes & Quick Wins UI/UX
+
+Voici un catalogue d'améliorations pratiques à forte valeur ajoutée et à mise en œuvre rapide :
+
+### 🚀 Quick Wins Ergonomie & Lisibilité
+1. **Optez pour la validation de formulaire "Inline"** :
+   - Affichez les erreurs de saisie immédiatement après que l'utilisateur quitte le champ (`onBlur`), plutôt qu'à la soumission globale du formulaire.
+2. **Masquez/Affichez les mots de passe** :
+   - Intégrez une icône (œil) permettant d'afficher temporairement le mot de passe saisi pour éviter les erreurs de frappe.
+3. **Optimisez la saisie mobile avec des attributs HTML appropriés** :
+   - Utilisez `inputmode="numeric"`, `type="email"`, `type="tel"`, `autocomplete="..."` pour déclencher automatiquement le bon clavier tactile.
+4. **Boutons avec état de chargement intégré** :
+   - Remplacez le texte du bouton par un mini-spinner et désactivez-le lors du clic (`disabled`) pour éviter les soumissions en double.
+5. **Affichez le bouton "Retour en haut de page" (*Scroll to top*)** :
+   - Utile sur les pages longues/catalogues avec apparition fluide dès 400px de défilement.
+
+### 🌙 Mode Sombre (Dark Mode)
+- Intégrez un basculeur de thème (Clair / Sombre / Système) qui s'adapte à la préférence système de l'utilisateur (`prefers-color-scheme`).
+- Évitez le noir pur (`#000000`) pour les fonds en mode sombre : privilégiez un gris foncé/anthracite (`#121212` ou `#0f172a`) pour préserver les yeux et réduire le contraste agressif.
+
+### ⚡ Performance Perçue & Micro-Interactions
+- **Feedback Haptique / Animations douces** : Ajoutez des micro-animations CSS de transition (ex: `transition: all 0.2s ease-in-out`) sur le survol (`:hover`) et l'appui (`:active`) des cartes et boutons.
+- **Affichage progressif d'images** : Utilisez `loading="lazy"` et des placeholders de faible résolution (Blur-up technique).
+
+---
+
+## 10. Matrice de Priorisation & Plan d'Action
 
 Lors d'un audit, classer chaque problème selon la grille suivante :
 
