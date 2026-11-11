@@ -13,6 +13,8 @@ Bienvenue dans le dépôt dédié à l'audit et à l'amélioration de l'interfac
   - Gestion des états de chargement, retours visuels et états vides (*empty states*).
   - Matrice de priorisation des retours (P1 à P4).
 
+- **`AUDIT_APPLICATION.md`** : audit technique de l'application aKeeper (code dans `devdownin/akeeper-1`) : anomalies, optimisations et compléments fonctionnels priorisés.
+
 ## 🚀 Comment réaliser un audit UI/UX avec ces ressources ?
 
 1. **Parcours des fonctionnalités** : Suivez les parcours utilisateurs clés en vous appuyant sur la grille dans `AUDIT_UI_UX.md`.
